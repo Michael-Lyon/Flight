@@ -124,3 +124,4 @@ STATIC_URL = '/static/'
 
 
 AUTH_USER_MODEL = 'flight.User'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
