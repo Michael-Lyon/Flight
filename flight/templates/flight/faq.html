@@ -376,7 +376,7 @@
 <!--====== Javascripts & Jquery ======-->
 
 {% endblock body %}
-{% block script %}
+{% comment %} {% block script %}
     <script>
         document.querySelectorAll(".item_header").forEach(
                 function (header) {
@@ -412,4 +412,4 @@
             );
 
     </script>
-{% endblock script %}
+{% endblock script %} {% endcomment %}
