@@ -1,0 +1,415 @@
+{% extends 'flight/layout.html' %}
+{% load static %}
+
+
+
+{% block body%}
+<style>
+    /** 2.12 Card **/
+    .card {
+        box-shadow: -8px 12px 18px 0 rgba(25, 42, 70, 0.13);
+        margin-bottom: 2.2rem;
+    }
+
+    .card.card-statistic {
+        box-shadow: 1px 2px 5px rgba(47, 170, 244, 0.5);
+        background: linear-gradient(to bottom, #25a6f1, #54b9ff);
+        border: none;
+    }
+
+    .card.card-statistic .card-title {
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+
+    .card.card-statistic .card-right p {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 0;
+    }
+
+    .card.card-statistic .card-right span.green {
+        color: #6fff6f;
+    }
+
+    .card.card-statistic .card-right span.red {
+        color: #ff7979;
+    }
+
+    .card.card-statistic .chart-wrapper {
+        height: 100px;
+    }
+
+    .card .card-header {
+        border: none;
+    }
+
+    .card .card-header h4 {
+        font-size: 1.2rem;
+    }
+
+    .card .card-header~.card-body {
+        padding-top: 0;
+    }
+
+    .card .card-content {
+        position: relative;
+    }
+
+    .card .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card .card-body {
+        padding: 1.4rem 1.7rem;
+    }
+
+    .card .card-heading {
+        color: #555;
+        font-size: 1.5rem;
+    }
+
+    .card .card-img-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .card .card-img-overlay p {
+        color: #eee;
+    }
+
+    .card .card-img-overlay .card-title {
+        color: #fff;
+    }
+
+    .pricing .card {
+        box-shadow: none;
+        margin-bottom: 0;
+        border-right: 1px solid #e9ecef;
+        box-shadow: 0 10px 10px #e9ecef;
+        margin-bottom: 0.5rem;
+    }
+
+    .pricing h1 {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .pricing .card-header .card-title {
+        font-size: 2rem !important;
+        margin-bottom: 0;
+    }
+
+    .pricing .card-header p {
+        font-size: 0.8rem;
+    }
+
+    .pricing ul li {
+        list-style: none;
+        margin-bottom: 0.5rem;
+    }
+
+    .pricing ul li i,
+    .pricing ul li svg {
+        width: 1rem;
+        color: #39DA8A;
+        font-size: 1rem;
+        margin-right: 7px;
+    }
+
+    .pricing .card-highlighted {
+        background-color: #5A8DEE;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .pricing .card-highlighted .card-header,
+    .pricing .card-highlighted .card-body {
+        background-color: #5A8DEE;
+        color: #fff;
+    }
+
+    .pricing .card-highlighted ul li {
+        color: #fff;
+    }
+
+    .pricing .card-highlighted ul li i,
+    .pricing .card-highlighted ul li svg {
+        color: tint-color(#28a745, 2);
+    }
+
+    .pricing .card-highlighted .card-footer {
+        background-color: #5A8DEE;
+    }
+
+    .pricing .card-highlighted .card-title {
+        color: #fff;
+        font-size: 1.8rem;
+    }
+
+    p {
+        color: black;
+    }
+
+    .menu-list li a {
+        color: black;
+    }
+
+
+    .container-fluid a {
+        color: black;
+    }
+</style>
+<!-- Hero section -->
+<!-- <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 hero-text">
+                    <h2>Invest in <span>Bitcoin</span> <br>Invest with aimarketingholdings</h2>
+                    <h4>We use modern progressive technologies of Bitcoin to earn money</h4>
+                    <form class="hero-subscribe-from">
+                        < <input type="text" placeholder="Enter your email" name="email"> -->
+<!-- <input class="site-btn sb-gradients" value="Get Started" name="submit" type="submit"> -->
+</form>
+</div>
+<!-- <div class="col-md-6">
+                    <img src="./coin_files/laptop.png" class="laptop-image" alt="">
+                </div> -->
+</div>
+</div>
+</section>
+<!-- Hero section end -->
+
+
+<!-- About section -->
+
+
+
+<!-- About section end -->
+
+<!-- <div class="row clearfix row-deck">
+        <div class="col-xl-12 col-lg-4 col-md-6" style="padding: 2%">
+            <iframe src="./coin_files/widget.html" scrolling="auto" marginwidth="0" marginheight="0" border="0"
+                style="border:0;margin:0;padding:0;" width="100%" height="36" frameborder="0"></iframe>
+        </div>
+    </div> -->
+<!-- Features section -->
+
+<!-- Features section end -->
+
+
+<!-- Process section -->
+<section class="process-section spad">
+    <div class="container">
+        <div class="section-title text-center">
+
+            <head>
+                <title>Page Title</title>
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+                <link rel="preconnect" href="https://fonts.gstatic.com">
+                <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+            </head>
+
+            <body>
+                <div class="fondo">
+                    <div class="cuerpo">
+                        <img width="300" height="300" src="https://raw.githubusercontent.com/luamoris/react-faq-card-info/a8bb6248c30bae08f077566df122ac83c23a3532/src/img/illustration-woman-online-desktop.svg"
+                            class="img">
+                        <div class="texto">
+                            <h3 class="titulo">FAQ</h3>
+                            <ul class="lista">
+                                <li class="item">
+                                    <div class="item_header">
+                                        <h4 class="pregunta">Question 13</h4>
+                                        <i class="fa fa-angle-down icon"></i>
+                                    </div>
+
+                                    <p class="parrafo">{% lorem 2 %}
+                                    </p>
+
+                                </li>
+                                <li class="item">
+                                    <div class="item_header">
+                                        <h4 class="pregunta">Question 2a</h4>
+                                        <i class="fa fa-angle-down icon"></i>
+                                    </div>
+                                    <p class="parrafo">{% lorem 2 %}</p>
+                                </li>
+                                <li class="item">
+                                    <div class="item_header">
+                                        <h4 class="pregunta">Question 1</h4>
+                                        <i class="fa fa-angle-down icon"></i>
+                                    </div>
+                                    <p class="parrafo">{% lorem 3 %} </p>
+                                </li>
+                                <li class="item">
+                                    <div class="item_header">
+                                        <h4 class="pregunta">Question 2</h4>
+                                        <i class="fa fa-angle-down icon"></i>
+                                    </div>
+                                    <p class="parrafo">{% lorem 3 %}</p>
+                                </li>
+                                <li class="item">
+                                    <div class="item_header">
+                                        <h4 class="pregunta">Question 3</h4>
+                                        <i class="fa fa-angle-down icon"></i>
+                                    </div>
+                                    <p class="parrafo">{% lorem 3 %}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+
+
+
+
+                </script>
+            </body>
+
+            </html>
+            <!-- <div class="row">
+                <div class="col-md-4 process">
+                    <div class="process-step">
+                        <figure class="process-icon">
+                            <img src="./coin_files/1.png" alt="#">
+                        </figure>
+                        <h4>Create Your Account</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 process">
+                    <div class="process-step">
+                        <figure class="process-icon">
+                            <img src="./coin_files/2.png" alt="#">
+                        </figure>
+                        <h4>Fund Your Wallet</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 process">
+                    <div class="process-step">
+                        <figure class="process-icon">
+                            <img src="./coin_files/3.png" alt="#">
+                        </figure>
+                        <h4>Withdraw your Funds</h4>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+</section>
+<!-- Process section end -->
+
+
+<!-- Fact section -->
+<!-- <section class="fact-section gradient-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>60</h2>
+						<p>Support <br> Countries</p>
+						<i class="ti-basketball"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>12K</h2>
+						<p>Transactions  <br> per hour</p>
+						<i class="ti-panel"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>5B</h2>
+						<p>Largest <br> Transactions</p>
+						<i class="ti-stats-up"></i>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="fact">
+						<h2>12</h2>
+						<p>Years <br> of Experience</p>
+						<i class="ti-user"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+<!-- Fact section end -->
+
+
+
+<!-- Newsletter section -->
+<!-- <section class="newsletter-section gradient-bg">
+		<div class="container text-white">
+			<div class="row">
+				<div class="col-lg-7 newsletter-text">
+					<h2>Subscribe to our Newsletter</h2>
+					<p>Sign up for our weekly industry updates, insider perspectives and in-depth market analysis.</p>
+				</div>
+				<div class="col-lg-5 col-md-8 offset-lg-0 offset-md-2">
+					<form class="newsletter-form">
+						<input type="text" placeholder="Enter your email">
+						<button>Get Started</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section> -->
+<!-- Newsletter section end -->
+
+
+
+<!-- Blog section -->
+
+<!-- Blog section end -->
+
+<!-- Footer section -->
+
+
+<!--====== Javascripts & Jquery ======-->
+
+{% endblock body %}
+{% block script %}
+    <script>
+        document.querySelectorAll(".item_header").forEach(
+                function (header) {
+
+                    header.addEventListener("click", () => {
+                        if (header.parentNode.classList.contains("active")) {
+                            header.parentNode.classList.remove("active");
+                            header.parentNode.style.height = "54px";
+
+                        } else {
+                            document.querySelectorAll(".item_header").forEach(
+                                function (header) {
+                                    header.parentNode.classList.remove("active");
+                                    header.parentNode.style.height = "54px"
+                                }
+                            )
+                            header.parentNode.classList.add("active");
+
+
+
+
+                            let altPar = header.nextElementSibling.scrollHeight;
+                            let altura = altPar + 54;
+                            header.parentNode.style.height = altura + "px";
+
+
+
+
+                        }
+
+                    })
+                }
+            );
+
+    </script>
+{% endblock script %}

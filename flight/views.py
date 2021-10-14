@@ -445,3 +445,12 @@ def resume_booking(request):
             return HttpResponseRedirect(reverse("login"))
     else:
         return HttpResponse("Method must be post.")
+
+
+
+def faq(request):
+    return render(request, "flight/faq.html")
+
+
+def complain(request):
+    return render(request, "flight/complain.html")
