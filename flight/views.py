@@ -219,6 +219,7 @@ def flight(request):
             'min_price': math.floor(min_price/100)*100
         })
 
+
 def review(request):
     flight_1 = request.GET.get('flight1Id')
     date1 = request.GET.get('flight1Date')

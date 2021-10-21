@@ -134,6 +134,9 @@
             </div>
         </div>
         {% if trip_type == '2' %}
+            {% if flights2 %}
+        
+            
             <div class="query-trip-type-div">
                 <div class="tabs">
                     <div class="selector"></div>
@@ -157,6 +160,7 @@
                     </div>
                 </div>-->
             </div>
+            {% endif %}
         {% endif %}
         <div class="query-result-div">
             <div class="container">
@@ -447,7 +451,7 @@
             <div class="query-result-div-2" style="display: none;">
                 <div class="container">
                     <div class="row">
-                        {% if flights2 %}
+                        {% if flights2 %} 
                             <div class="col-lg-3 filter-div">
                                 <div class="close-filter" style="margin-top: 0;">
                                     <button class="btn b1" onclick="close_filter(this)">
@@ -675,7 +679,7 @@
                                                 <div class="flight-details">
                                                     <div class="flight-price">
                                                         <h5>
-                                                            ₹ 
+                                                            $ 
                                                             <span>
                                                                 {% if seat == 'Economy' %}{{flight2.economy_fare}}{% endif %}
                                                                 {% if seat == 'Business' %}{{flight2.business_fare}}{% endif %}
@@ -726,9 +730,11 @@
                                 </div>
                             </div>
                         {% endif %}
+                        
                     </div>
                 </div>
             </div>
+            {% if flights %}
             <div class="selection-div">
                 <div class="col-3 selection1">
                     <div class="white">
@@ -737,7 +743,7 @@
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                             </svg>
-                            <span>{{destination.code|upper}}</span>&nbsp;&nbsp;@&nbsp;&nbsp;₹
+                            <span>{{destination.code|upper}}</span>&nbsp;&nbsp;@&nbsp;&nbsp;$
                             <span id="select-f1-fare">
                                 {% if seat == "Economy" %}
                                     {{flights.all.0.economy_fare}}
@@ -757,14 +763,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 selection2">
+            {% endif %}
+              {% if flights2  %}   
+              <div class="col-3 selection2">
                     <div class="white">
                         <div>
                             <span>{{destination.code|upper}}</span>
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                             </svg>
-                            <span>{{origin.code|upper}}</span>&nbsp;&nbsp;@&nbsp;&nbsp;₹
+                            <span>{{origin.code|upper}}</span>&nbsp;&nbsp;@&nbsp;&nbsp;$
                             <span id="select-f2-fare">
                                 {% if seat == "Economy" %}
                                     {{flights2.all.0.economy_fare}}
@@ -790,7 +798,7 @@
                             <span>TOTAL FARE</span>
                         </div>
                         <div>
-                            <span>₹
+                            <span>$
                                 <span id="select-total-fare">
                                     {% if seat == "Economy" %}
                                         {{flights.all.0.economy_fare | add:flights2.all.0.economy_fare}}
@@ -852,6 +860,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         {% endif %}
     </section>
 {% endblock %}
