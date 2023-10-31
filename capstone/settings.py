@@ -25,7 +25,7 @@ SECRET_KEY = '=k3z-^1ov_hy5y%ebw(2e-npk@$#!(c8ix=+7so*hmw9m0c52*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['flight-with-adora.herokuapp.com', 'https://flight-with-adora.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['book-a-flight.up.railway.app', 'localhost']
 
 
 # Application definition
@@ -129,4 +129,5 @@ STATICFILES_DIRS = (
 
 
 AUTH_USER_MODEL = 'flight.User'
+CSRF_TRUSTED_ORIGINS = ["https://book-a-flight.up.railway.app"]
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
